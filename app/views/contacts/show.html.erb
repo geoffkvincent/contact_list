@@ -1,4 +1,4 @@
-<h1>Contact</h1>
+<h1><%= "#{@contact.first_name} #{@contact.last_name}" %></h1>
 <h2><%= "Last Name: #{@contact.last_name}" %></h2>
 <h2><%= "First Name: #{@contact.first_name}" %></h2>
 <h3><%= "Address: #{@contact.address}" %></h3>
@@ -7,3 +7,6 @@
 <h3><%= "Email: #{@contact.email}" %></h3>
 <h3><%= "Notes: #{@contact.notes}" %></h3>
 <%= link_to 'Back', contacts_path %>
+<%= link_to 'Edit', edit_contact_path(@contact.id) %>
+<%= link_to 'Delete', @contact, method: :delete %>
+
